@@ -121,7 +121,7 @@ static void fn(struct mg_connection *c, int ev, void *ev_data) {
             mg_http_reply(c, 302, "Location: /\r\n", "");
         } 
         
-        // --- 4. РОЗДАЧА ФАЙЛІВ (Той самий робочий код) ---
+
         else {
             struct mg_http_serve_opts opts = { .root_dir = s_root_dir };
             mg_http_serve_dir(c, hm, &opts);
@@ -129,7 +129,6 @@ static void fn(struct mg_connection *c, int ev, void *ev_data) {
     }
 }
 
-// Головний цикл потоку
 void *server_thread_loop(void *arg) {
     (void)arg;
     struct mg_mgr mgr;
