@@ -80,7 +80,7 @@ void *hardware_thread_loop(void *arg) {
 
         bool activity_detected = false;
 
-        // Кнопка 1 (Довге натискання = Вимкнення)
+        // Кнопка 1 ( Вимкнення)
         if (state_b1 == 0) {
             b1_press_duration++;
             if (b1_press_duration > 60) { // ~3 секунди
@@ -142,7 +142,7 @@ void *hardware_thread_loop(void *arg) {
             pthread_mutex_unlock(&state_mutex);
         }
 
-        usleep(50000); // Спимо 50мс (20 FPS для кнопок)
+        usleep(50000); 
     }
 
     return NULL;
