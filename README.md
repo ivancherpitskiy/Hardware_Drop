@@ -3,7 +3,6 @@
 Локальний сервіс для обміну файлами на базі Raspberry Pi. 
 Проєкт розроблено як демонстрацію навичок для Ajax Embedded Engineering Internship.
 
-![Hardware Drop](assets/hardware_setup.jpg)
 
 ## Опис
 
