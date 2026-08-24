@@ -26,3 +26,26 @@ Hardware Drop — це Linux-демон, написаний на C, який п�
 ├── src/                  # Вихідний код проєкту (.c, .h, Makefile)
 ├── assets/               # Фотографії та скріншоти
 └── README.md             # Документація проєкту
+```
+
+##  Збірка та запуск
+1. Клонування:
+```
+git clone https://github.com/ivancherpitskiy/Hardware_Drop.git
+cd Hardware_Drop/src
+```
+2. Збірка:
+
+```
+make
+```
+3. Налаштування I2C (якщо не увімкнено):
+
+```
+sudo raspi-config nonint do_i2c 0
+```
+4. Запуск:
+```
+Bash
+sudo ./storage_daemon
+```
