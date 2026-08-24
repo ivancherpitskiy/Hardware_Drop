@@ -1,0 +1,5 @@
+*.o
+storage_daemon
+
+.DS_Store
+.vscode/
