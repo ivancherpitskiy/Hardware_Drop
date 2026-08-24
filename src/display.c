@@ -91,7 +91,7 @@ bool display_init(void) {
     i2c_fd = open("/dev/i2c-1", O_RDWR);
     if (i2c_fd < 0 || ioctl(i2c_fd, I2C_SLAVE, I2C_ADDR) < 0) return false;
 
-    // Виправлена конфігурація для 128x64
+ 
     uint8_t init_cmds[] = {
         0xAE, 0x20, 0x00, 0x40, 0xA1, 0xC8, 0xA6, 0xA8, 0x3F, 
         0xD3, 0x00, 0xD5, 0x80, 0xD9, 0xF1, 0xDA, 0x12, 0xDB, 0x40, 
@@ -141,7 +141,7 @@ static void draw_pixel(int x, int y, bool color) {
 }
 
 static void oled_update(void) {
-    // Примусове скидання меж перед виводом буфера
+ 
     oled_command(0x21); 
     oled_command(0);    
     oled_command(127);  
